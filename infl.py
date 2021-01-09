@@ -14,7 +14,7 @@ ifport = 8086
 measurement_name = "system"
 
 # take a timestamp for this measurement
-time = datetime.datetime.utcnow()
+curr_time = datetime.datetime.utcnow()
 
 # collect some stats from psutil
 disk = psutil.disk_usage('/')
@@ -25,7 +25,7 @@ load = psutil.cpu_percent()
 body = [
     {
         "measurement": measurement_name,
-        "time": time,
+        "time": curr_time,
         
         "fields": {
             "load": load,
