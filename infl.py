@@ -2,6 +2,7 @@
 
 import datetime
 import psutil
+import time
 from influxdb import InfluxDBClient
 
 # influx configuration - edit these
@@ -42,4 +43,6 @@ body = [
 ifclient = InfluxDBClient(ifhost,ifport,ifuser,ifpass,ifdb)
 
 # write the measurement
-ifclient.write_points(body)
+while True:
+    time.sleep(5)
+    ifclient.write_points(body)
