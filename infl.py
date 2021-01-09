@@ -29,6 +29,7 @@ while True:
     mem = psutil.virtual_memory()
     load = psutil.cpu_percent()
 
+
     # format the data as a single measurement for influx
     body = [
         {
@@ -46,6 +47,9 @@ while True:
             }
         }
     ]
+    
+    print(body)
+
 
     time.sleep(5)
 
