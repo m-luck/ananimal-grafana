@@ -18,7 +18,7 @@ time = datetime.datetime.utcnow()
 # collect some stats from psutil
 disk = psutil.disk_usage('/')
 mem = psutil.virtual_memory()
-load = psutil.getloadavg()
+load = psutil.cpu_percent()
 
 # format the data as a single measurement for influx
 body = [
