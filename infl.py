@@ -27,9 +27,7 @@ body = [
         "time": time,
         
         "fields": {
-            "load_1": load[0],
-            "load_5": load[1],
-            "load_15": load[2],
+            "load": load,
             "disk_percent": disk.percent,
             "disk_free": disk.free,
             "disk_used": disk.used,
